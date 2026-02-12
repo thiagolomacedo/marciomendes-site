@@ -570,6 +570,11 @@ ul {
 }
 
 .content-image.white-bg {
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,0.5) 60%, transparent 100%);
+}
+
+/* First PNG image (meditation) - gradient right to left */
+.content-row.reverse .content-image.white-bg {
   background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,0.5) 60%, transparent 100%);
 }
 
