@@ -383,13 +383,21 @@ ul {
 .hero-subtitle {
   font-size: 22px;
   font-weight: 300;
-  color: rgba(255,255,255,0.8);
+  color: rgba(255,255,255,0.7);
   letter-spacing: 1px;
   position: absolute;
   bottom: 40px;
   left: 0;
   right: 0;
   text-align: center;
+  cursor: default;
+  transition: all 0.4s ease;
+}
+
+.hero-subtitle:hover {
+  color: rgba(255,255,255,0.95);
+  text-shadow: 0 0 15px rgba(0,179,179,0.3), 0 0 30px rgba(0,179,179,0.15);
+  letter-spacing: 2px;
 }
 
 /* Floating Particles Effect */
