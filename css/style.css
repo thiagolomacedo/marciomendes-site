@@ -465,6 +465,11 @@ ul {
   display: block;
 }
 
+.content-image.transparent img {
+  object-fit: contain;
+  background: transparent;
+}
+
 .content-text {
   flex: 1;
   padding: 40px;
