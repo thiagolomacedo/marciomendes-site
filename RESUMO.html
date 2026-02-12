@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resumo - Marcio Mendes Website</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+      color: #fff;
+      min-height: 100vh;
+      padding: 40px 20px;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    h1 {
+      font-size: 42px;
+      text-align: center;
+      margin-bottom: 10px;
+      color: #00b3b3;
+    }
+    .subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.7);
+      margin-bottom: 40px;
+      font-size: 18px;
+    }
+    .section {
+      background: rgba(255,255,255,0.05);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 20px;
+      border: 1px solid rgba(0,179,179,0.2);
+    }
+    .section h2 {
+      color: #00b3b3;
+      font-size: 20px;
+      margin-bottom: 15px;
+      border-bottom: 1px solid rgba(0,179,179,0.3);
+      padding-bottom: 10px;
+    }
+    .info-grid {
+      display: grid;
+      grid-template-columns: 150px 1fr;
+      gap: 10px;
+    }
+    .info-grid dt {
+      color: rgba(255,255,255,0.6);
+    }
+    .info-grid dd {
+      color: #fff;
+    }
+    .info-grid dd a {
+      color: #00b3b3;
+      text-decoration: none;
+    }
+    .info-grid dd a:hover {
+      text-decoration: underline;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    th {
+      color: #00b3b3;
+      font-weight: 600;
+    }
+    td a {
+      color: #00b3b3;
+      text-decoration: none;
+    }
+    td a:hover {
+      text-decoration: underline;
+    }
+    .tag {
+      display: inline-block;
+      background: rgba(0,179,179,0.2);
+      color: #00b3b3;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 13px;
+      margin: 3px;
+    }
+    .languages {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 10px;
+    }
+    .lang-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255,255,255,0.08);
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 14px;
+    }
+    .pages-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .page-item {
+      background: rgba(255,255,255,0.05);
+      padding: 12px;
+      border-radius: 8px;
+      border-left: 3px solid #00b3b3;
+    }
+    .page-item strong {
+      color: #00b3b3;
+    }
+    .features-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .features-list li {
+      background: rgba(255,255,255,0.05);
+      padding: 10px 15px;
+      border-radius: 8px;
+    }
+    .features-list li::before {
+      content: "✓ ";
+      color: #00b3b3;
+    }
+    .status {
+      display: inline-block;
+      background: #00b3b3;
+      color: #000;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .status.pending {
+      background: #f0ad4e;
+    }
+    .folder-structure {
+      background: #0d0d0d;
+      border-radius: 8px;
+      padding: 15px;
+      font-family: 'Consolas', monospace;
+      font-size: 13px;
+      overflow-x: auto;
+    }
+    .folder-structure .folder {
+      color: #00b3b3;
+    }
+    .folder-structure .file {
+      color: rgba(255,255,255,0.7);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>MARCIO MENDES</h1>
+    <p class="subtitle">Website Institucional - Capoeira Master & Educator</p>
+
+    <!-- Info Geral -->
+    <div class="section">
+      <h2>Informacoes Gerais</h2>
+      <dl class="info-grid">
+        <dt>Cliente:</dt>
+        <dd>Mestre Marcio Mendes (Toronto, Canada)</dd>
+        <dt>Tipo:</dt>
+        <dd>Website Institucional (Freelance)</dd>
+        <dt>Status:</dt>
+        <dd><span class="status">Home Finalizada</span> <span class="status pending">Outras paginas pendentes</span></dd>
+        <dt>Stack:</dt>
+        <dd>
+          <span class="tag">HTML5</span>
+          <span class="tag">CSS3</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">Google Translate</span>
+        </dd>
+      </dl>
+    </div>
+
+    <!-- Hospedagem -->
+    <div class="section">
+      <h2>Hospedagem</h2>
+      <table>
+        <tr>
+          <th>Servico</th>
+          <th>Plataforma</th>
+          <th>URL</th>
+        </tr>
+        <tr>
+          <td>Website</td>
+          <td>Vercel</td>
+          <td><a href="https://marciomendes-site.vercel.app" target="_blank">marciomendes-site.vercel.app</a></td>
+        </tr>
+        <tr>
+          <td>Codigo</td>
+          <td>GitHub</td>
+          <td><a href="https://github.com/thiagolomacedo/marciomendes-site" target="_blank">github.com/thiagolomacedo/marciomendes-site</a></td>
+        </tr>
+        <tr>
+          <td>Dominio Final</td>
+          <td>Hostinger (DNS)</td>
+          <td>marciomendes.ca (pendente conexao)</td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Idiomas -->
+    <div class="section">
+      <h2>Idiomas Suportados (10)</h2>
+      <div class="languages">
+        <div class="lang-item">🇺🇸 English (EN)</div>
+        <div class="lang-item">🇧🇷 Portugues (PT)</div>
+        <div class="lang-item">🇪🇸 Espanol (ES)</div>
+        <div class="lang-item">🇫🇷 Francais (FR)</div>
+        <div class="lang-item">🇩🇪 Deutsch (DE)</div>
+        <div class="lang-item">🇮🇹 Italiano (IT)</div>
+        <div class="lang-item">🇯🇵 日本語 (JA)</div>
+        <div class="lang-item">🇰🇷 한국어 (KO)</div>
+        <div class="lang-item">🇨🇳 中文 (ZH)</div>
+        <div class="lang-item">🇸🇦 العربية (AR)</div>
+      </div>
+    </div>
+
+    <!-- Paginas -->
+    <div class="section">
+      <h2>Estrutura de Paginas</h2>
+      <div class="pages-list">
+        <div class="page-item"><strong>Home</strong><br>index.html</div>
+        <div class="page-item"><strong>Capoeira</strong><br>pages/capoeira.html</div>
+        <div class="page-item"><strong>Muiraquita</strong><br>pages/muiraquita.html</div>
+        <div class="page-item"><strong>Capoeira Angola</strong><br>pages/capoeira-angola.html</div>
+        <div class="page-item"><strong>TRECIRAL</strong><br>pages/treciral.html</div>
+        <div class="page-item"><strong>Foundation</strong><br>pages/fundation.html</div>
+        <div class="page-item"><strong>Author's Works</strong><br>pages/authors-works.html</div>
+        <div class="page-item"><strong>Blog Marcio</strong><br>pages/blog.html</div>
+        <div class="page-item"><strong>Store</strong><br>pages/store.html</div>
+        <div class="page-item"><strong>Capoeira Class</strong><br>pages/capoeira-class.html</div>
+        <div class="page-item"><strong>Meditation Class</strong><br>pages/meditation-class.html</div>
+        <div class="page-item"><strong>Stretching Class</strong><br>pages/stretching-class.html</div>
+      </div>
+    </div>
+
+    <!-- Funcionalidades -->
+    <div class="section">
+      <h2>Funcionalidades da Home</h2>
+      <ul class="features-list">
+        <li>Hero com nome e tagline</li>
+        <li>Particulas flutuantes animadas (CSS)</li>
+        <li>Efeito glow no titulo ao hover</li>
+        <li>Layout alternado imagem/texto</li>
+        <li>Imagens PNG com gradiente suave</li>
+        <li>Secao da familia com foto dos filhos</li>
+        <li>Menu dropdown de idiomas</li>
+        <li>Menu responsivo mobile</li>
+        <li>Animacoes fadeIn e fadeInUp</li>
+        <li>Destaques coloridos no texto (teal)</li>
+      </ul>
+    </div>
+
+    <!-- Estrutura de Pastas -->
+    <div class="section">
+      <h2>Estrutura de Pastas</h2>
+      <div class="folder-structure">
+        <span class="folder">C:\marciomendes-site\</span><br>
+        ├── <span class="file">index.html</span><br>
+        ├── <span class="file">RESUMO.html</span><br>
+        ├── <span class="folder">css/</span><br>
+        │   ├── <span class="file">style.css</span><br>
+        │   └── <span class="file">pages.css</span><br>
+        ├── <span class="folder">js/</span><br>
+        │   └── <span class="file">main.js</span><br>
+        ├── <span class="folder">images/</span><br>
+        │   ├── <span class="file">marcio-profile.jpg</span><br>
+        │   ├── <span class="file">img1-mountain.jpg</span><br>
+        │   ├── <span class="file">meditation-watercolor.png</span><br>
+        │   ├── <span class="file">capoeira-watercolor.png</span><br>
+        │   ├── <span class="file">family-capoeira.png</span><br>
+        │   ├── <span class="file">sons-raphael-gabriel.png</span><br>
+        │   └── <span class="file">original-*.jpg</span><br>
+        └── <span class="folder">pages/</span><br>
+            ├── <span class="file">capoeira.html</span><br>
+            ├── <span class="file">muiraquita.html</span><br>
+            ├── <span class="file">capoeira-angola.html</span><br>
+            ├── <span class="file">treciral.html</span><br>
+            ├── <span class="file">fundation.html</span><br>
+            ├── <span class="file">authors-works.html</span><br>
+            ├── <span class="file">blog.html</span><br>
+            ├── <span class="file">store.html</span><br>
+            ├── <span class="file">capoeira-class.html</span><br>
+            ├── <span class="file">meditation-class.html</span><br>
+            └── <span class="file">stretching-class.html</span>
+      </div>
+    </div>
+
+    <!-- Pendencias -->
+    <div class="section">
+      <h2>Pendencias</h2>
+      <table>
+        <tr>
+          <th>Item</th>
+          <th>Status</th>
+        </tr>
+        <tr>
+          <td>Ajustar outras paginas internas</td>
+          <td><span class="status pending">Pendente</span></td>
+        </tr>
+        <tr>
+          <td>Links YouTube e Instagram no footer</td>
+          <td><span class="status pending">Pendente</span></td>
+        </tr>
+        <tr>
+          <td>Conectar dominio marciomendes.ca</td>
+          <td><span class="status pending">Pendente</span></td>
+        </tr>
+      </table>
+    </div>
+
+    <!-- Deploy -->
+    <div class="section">
+      <h2>Deploy</h2>
+      <dl class="info-grid">
+        <dt>Metodo:</dt>
+        <dd>Push para GitHub dispara deploy automatico no Vercel</dd>
+        <dt>Tempo:</dt>
+        <dd>~1-2 minutos</dd>
+        <dt>Comando:</dt>
+        <dd><code style="background:#0d0d0d;padding:4px 8px;border-radius:4px;">git add -A && git commit -m "msg" && git push</code></dd>
+      </dl>
+    </div>
+
+  </div>
+</body>
+</html>
