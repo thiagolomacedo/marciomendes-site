@@ -11,6 +11,26 @@ function toggleMobileMenu() {
   btn.classList.toggle('active');
 }
 
+// Language Dropdown Toggle
+function toggleLangDropdown() {
+  const dropdown = document.querySelector('.language-dropdown');
+  dropdown.classList.toggle('open');
+}
+
+// Select Language
+function selectLanguage(lang, flag, code) {
+  // Update button display
+  const btn = document.querySelector('.lang-dropdown-btn');
+  btn.querySelector('.current-lang-flag').textContent = flag;
+  btn.querySelector('.current-lang-text').textContent = code;
+
+  // Close dropdown
+  document.querySelector('.language-dropdown').classList.remove('open');
+
+  // Translate
+  translateTo(lang);
+}
+
 // Translate Function
 function translateTo(lang) {
   const select = document.querySelector('.goog-te-combo');
@@ -22,6 +42,14 @@ function translateTo(lang) {
     setTimeout(() => translateTo(lang), 500);
   }
 }
+
+// Close dropdown when clicking outside
+document.addEventListener('click', (e) => {
+  const dropdown = document.querySelector('.language-dropdown');
+  if (dropdown && !dropdown.contains(e.target)) {
+    dropdown.classList.remove('open');
+  }
+});
 
 // Scroll Animations
 function handleScrollAnimations() {

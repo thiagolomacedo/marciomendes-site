@@ -61,12 +61,31 @@
         </ul>
       </nav>
 
-      <!-- Language Selector -->
-      <div class="language-selector">
-        <button class="lang-btn" onclick="translateTo('en')" title="English">🇺🇸</button>
-        <button class="lang-btn" onclick="translateTo('pt')" title="Português">🇧🇷</button>
-        <button class="lang-btn" onclick="translateTo('es')" title="Español">🇪🇸</button>
-        <button class="lang-btn" onclick="translateTo('fr')" title="Français">🇫🇷</button>
+      <!-- Language Selector Dropdown -->
+      <div class="language-dropdown">
+        <button class="lang-dropdown-btn" onclick="toggleLangDropdown()">
+          <span class="current-lang-flag">🇺🇸</span>
+          <span class="current-lang-text">EN</span>
+          <span class="lang-arrow">▼</span>
+        </button>
+        <div class="lang-dropdown-menu" id="langMenu">
+          <button class="lang-option" onclick="selectLanguage('en', '🇺🇸', 'EN')">
+            <span class="lang-flag">🇺🇸</span>
+            <span class="lang-name">English</span>
+          </button>
+          <button class="lang-option" onclick="selectLanguage('pt', '🇧🇷', 'PT')">
+            <span class="lang-flag">🇧🇷</span>
+            <span class="lang-name">Português</span>
+          </button>
+          <button class="lang-option" onclick="selectLanguage('es', '🇪🇸', 'ES')">
+            <span class="lang-flag">🇪🇸</span>
+            <span class="lang-name">Español</span>
+          </button>
+          <button class="lang-option" onclick="selectLanguage('fr', '🇫🇷', 'FR')">
+            <span class="lang-flag">🇫🇷</span>
+            <span class="lang-name">Français</span>
+          </button>
+        </div>
       </div>
 
       <!-- Mobile Menu Button -->
