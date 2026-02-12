@@ -575,7 +575,9 @@ ul {
 
 /* PNG images in reverse rows - gradient right to left extending to text */
 .content-row.reverse .content-image.white-bg {
-  background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,0.7) 60%, rgba(255,255,255,0.3) 85%, transparent 100%);
+  background: linear-gradient(to left, rgba(255,255,255,0.6) 0%, rgba(255,255,255,0.4) 40%, rgba(255,255,255,0.15) 70%, transparent 100%);
+  margin-left: -150px;
+  padding-left: 150px;
 }
 
 .content-image.white-bg img {
