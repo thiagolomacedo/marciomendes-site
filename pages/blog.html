@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Mestre Márcio Mendes</title>
+  <meta name="description" content="Blog by Master Márcio Mendes - Insights on capoeira, philosophy, and life.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pages.css">
+  <style>
+    .blog-container {
+      padding-top: 90px;
+      min-height: 100vh;
+      background: #000;
+    }
+    .blog-iframe {
+      width: 100%;
+      height: calc(100vh - 90px);
+      border: none;
+      background: #fff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-text">MARCIO<br>MENDES</span>
+        <div class="logo-image">
+          <div class="placeholder-circle">FOTO</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li><a href="../index.html">HOME</a></li>
+          <li class="has-submenu">
+            <a href="capoeira.html">CAPOEIRA <span class="arrow">▼</span></a>
+            <ul class="submenu">
+              <li><a href="capoeira.html">About Capoeira</a></li>
+              <li><a href="muiraquita.html">Muiraquitã Capoeira</a></li>
+              <li><a href="capoeira-angola.html">Capoeira Angola</a></li>
+            </ul>
+          </li>
+          <li><a href="treciral.html">TRECIRAL</a></li>
+          <li><a href="fundation.html">FUNDATION</a></li>
+          <li class="has-submenu">
+            <a href="authors-works.html" class="active">BLOG <span class="arrow">▼</span></a>
+            <ul class="submenu">
+              <li><a href="authors-works.html">Author's Works</a></li>
+              <li><a href="blog.html">Blog Marcio</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <a href="store.html">STORE <span class="arrow">▼</span></a>
+            <ul class="submenu">
+              <li><a href="store.html">Products</a></li>
+              <li><a href="#" target="_blank">Capoeira Class</a></li>
+              <li><a href="#" target="_blank">Meditation Class</a></li>
+              <li><a href="#" target="_blank">Stretching Class</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="language-selector">
+        <button class="lang-btn" onclick="translateTo('en')" title="English">🇺🇸</button>
+        <button class="lang-btn" onclick="translateTo('pt')" title="Português">🇧🇷</button>
+        <button class="lang-btn" onclick="translateTo('es')" title="Español">🇪🇸</button>
+        <button class="lang-btn" onclick="translateTo('fr')" title="Français">🇫🇷</button>
+      </div>
+
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Blog Embed -->
+  <div class="blog-container">
+    <iframe
+      class="blog-iframe"
+      src="https://mastermarciomendes.wordpress.com"
+      title="Blog Mestre Márcio Mendes"
+      loading="lazy"
+    ></iframe>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
