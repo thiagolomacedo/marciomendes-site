@@ -470,6 +470,14 @@ ul {
   background: transparent;
 }
 
+.content-image.white-bg {
+  background: #f5f5f5;
+}
+
+.content-image.white-bg img {
+  padding: 20px;
+}
+
 .content-text {
   flex: 1;
   padding: 40px;
