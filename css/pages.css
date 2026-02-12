@@ -344,6 +344,108 @@
   background: #000;
 }
 
+/* Class Options Section */
+.class-options {
+  background: #000;
+}
+
+.classes-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.class-card {
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #222;
+}
+
+.class-content {
+  padding: 30px;
+}
+
+.class-content h3 {
+  font-size: 24px;
+  color: #00b3b3;
+  margin-bottom: 5px;
+}
+
+.class-subtitle {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.class-content p {
+  font-size: 16px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.8);
+  margin-bottom: 20px;
+}
+
+.pricing-box {
+  background: rgba(0,102,102,0.1);
+  border: 1px solid #006666;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.price-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.price-item:last-child {
+  border-bottom: none;
+}
+
+.price-label {
+  color: rgba(255,255,255,0.7);
+}
+
+.price-value {
+  font-weight: 700;
+  color: #00b3b3;
+}
+
+/* Class Info Section */
+.class-info {
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+}
+
+.class-info-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.class-info-text h2 {
+  color: #00b3b3;
+  margin-bottom: 20px;
+}
+
+.class-info-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 15px;
+}
+
+/* Benefits Grid 6 */
+.benefits-grid-6 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+}
+
 .books-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
