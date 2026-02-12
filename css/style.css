@@ -570,11 +570,30 @@ ul {
 }
 
 .content-image.white-bg {
-  background: #f5f5f5;
+  background: rgba(255,255,255,0.85);
+  animation: pulseGlow 4s ease-in-out infinite;
+  transition: all 0.4s ease;
+}
+
+.content-image.white-bg:hover {
+  background: rgba(255,255,255,0.95);
+  box-shadow: 0 0 30px rgba(255,255,255,0.3), 0 0 60px rgba(0,179,179,0.15);
+  animation: none;
 }
 
 .content-image.white-bg img {
   padding: 20px;
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  }
+  50% {
+    background: rgba(255,255,255,0.92);
+    box-shadow: 0 0 20px rgba(255,255,255,0.2), 0 0 40px rgba(0,179,179,0.08);
+  }
 }
 
 .content-text {
