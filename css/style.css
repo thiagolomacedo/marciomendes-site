@@ -1,0 +1,538 @@
+/* ====================================
+   MESTRE MÁRCIO MENDES - STYLES
+   ==================================== */
+
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Assistant', sans-serif;
+  background-color: #000;
+  color: #fff;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* ====================================
+   HEADER
+   ==================================== */
+.header {
+  background: linear-gradient(180deg, #004d4d 0%, #006666 50%, #003d3d 100%);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  padding: 15px 0;
+}
+
+.header-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-text {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #fff;
+}
+
+.logo-image {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid #fff;
+}
+
+.logo-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Placeholder for images */
+.placeholder-circle {
+  width: 100%;
+  height: 100%;
+  background: #004d4d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: #fff;
+}
+
+.placeholder-image {
+  width: 100%;
+  height: 250px;
+  background: linear-gradient(135deg, #004d4d, #006666);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: rgba(255,255,255,0.5);
+  border: 2px solid #006666;
+}
+
+.placeholder-image.large {
+  height: 400px;
+}
+
+/* Navigation */
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-menu > li > a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border-radius: 4px;
+}
+
+.nav-menu > li > a:hover,
+.nav-menu > li > a.active {
+  background: rgba(255,255,255,0.1);
+}
+
+.arrow {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+/* Submenu */
+.has-submenu {
+  position: relative;
+}
+
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #004d4d;
+  min-width: 200px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+}
+
+.has-submenu:hover .submenu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.submenu li a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.submenu li:last-child a {
+  border-bottom: none;
+}
+
+.submenu li a:hover {
+  background: rgba(255,255,255,0.1);
+  padding-left: 25px;
+}
+
+/* Language Selector */
+.language-selector {
+  display: flex;
+  gap: 8px;
+}
+
+.lang-btn {
+  background: transparent;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 5px;
+}
+
+.lang-btn:hover {
+  transform: scale(1.2);
+}
+
+/* Mobile Menu */
+.mobile-menu-btn {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.mobile-menu-btn span {
+  width: 25px;
+  height: 3px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+/* ====================================
+   HERO SECTION
+   ==================================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, #000 0%, #111 100%);
+  padding-top: 100px;
+}
+
+.hero-content {
+  max-width: 800px;
+  padding: 40px;
+}
+
+.hero-title {
+  font-size: 72px;
+  font-weight: 700;
+  letter-spacing: 8px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 50px rgba(0,102,102,0.5);
+}
+
+.hero-subtitle {
+  font-size: 22px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 1px;
+}
+
+/* ====================================
+   SECTIONS
+   ==================================== */
+.section {
+  padding: 100px 0;
+}
+
+.section h2 {
+  font-size: 36px;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+/* About Section */
+.about {
+  background: #000;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.about-card {
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #222;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,102,102,0.2);
+}
+
+.about-image {
+  width: 100%;
+  overflow: hidden;
+}
+
+.about-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.about-text {
+  padding: 25px;
+}
+
+.about-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+}
+
+.about-text strong {
+  color: #00b3b3;
+}
+
+/* Journey Section */
+.journey {
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+}
+
+.journey-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.journey-text p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: rgba(255,255,255,0.85);
+}
+
+.journey-text strong {
+  color: #00b3b3;
+}
+
+.journey-image img {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid #006666;
+}
+
+/* Testimonial Section */
+.testimonial {
+  background: linear-gradient(135deg, #004d4d 0%, #003d3d 100%);
+  text-align: center;
+}
+
+.testimonial-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.testimonial blockquote {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.8;
+  margin: 30px 0;
+  padding: 30px;
+  border-left: 4px solid #00b3b3;
+  background: rgba(0,0,0,0.2);
+  border-radius: 0 12px 12px 0;
+}
+
+.testimonial-authors p {
+  font-size: 16px;
+  margin: 10px 0;
+  color: rgba(255,255,255,0.9);
+}
+
+/* ====================================
+   FOOTER
+   ==================================== */
+.footer {
+  background: #000;
+  padding: 60px 0 30px;
+  border-top: 1px solid #222;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer-logo span {
+  font-size: 24px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 30px;
+}
+
+.footer-links a {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #00b3b3;
+}
+
+.footer-copy {
+  color: rgba(255,255,255,0.5);
+  font-size: 14px;
+}
+
+/* ====================================
+   ANIMATIONS
+   ==================================== */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 1s ease forwards;
+}
+
+.animate-fadeInUp {
+  animation: fadeInUp 1s ease forwards;
+}
+
+.animate-pulse {
+  animation: pulse 2s ease infinite;
+}
+
+/* ====================================
+   RESPONSIVE
+   ==================================== */
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+  .journey-content {
+    grid-template-columns: 1fr;
+  }
+
+  .journey-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 768px) {
+  .nav {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+
+  .language-selector {
+    display: none;
+  }
+
+  .hero-title {
+    font-size: 42px;
+    letter-spacing: 4px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section h2 {
+    font-size: 28px;
+  }
+
+  .testimonial blockquote {
+    font-size: 18px;
+    padding: 20px;
+  }
+}
+
+/* ====================================
+   GOOGLE TRANSLATE OVERRIDE
+   ==================================== */
+.goog-te-banner-frame {
+  display: none !important;
+}
+
+body {
+  top: 0 !important;
+}
+
+.skiptranslate {
+  display: none !important;
+}

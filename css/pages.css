@@ -1,0 +1,379 @@
+/* ====================================
+   PAGES SPECIFIC STYLES
+   ==================================== */
+
+/* Page Hero */
+.page-hero {
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(180deg, #004d4d 0%, #000 100%);
+  padding-top: 100px;
+}
+
+.page-hero-content h1 {
+  font-size: 56px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin-bottom: 15px;
+}
+
+.page-hero-content p {
+  font-size: 20px;
+  font-weight: 300;
+  color: rgba(255,255,255,0.8);
+}
+
+/* Page Intro */
+.page-intro {
+  background: #000;
+}
+
+.intro-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.intro-text h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #00b3b3;
+}
+
+.intro-text p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: rgba(255,255,255,0.85);
+}
+
+.intro-text strong {
+  color: #00b3b3;
+}
+
+/* Styles Section */
+.styles {
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+}
+
+.section-title {
+  font-size: 36px;
+  margin-bottom: 50px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.styles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.style-card {
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #222;
+  transition: all 0.3s ease;
+}
+
+.style-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,102,102,0.2);
+  border-color: #006666;
+}
+
+.style-content {
+  padding: 25px;
+}
+
+.style-content h3 {
+  font-size: 22px;
+  margin-bottom: 15px;
+  color: #00b3b3;
+}
+
+.style-content p {
+  font-size: 15px;
+  line-height: 1.7;
+  margin-bottom: 10px;
+  color: rgba(255,255,255,0.8);
+}
+
+.style-figure {
+  font-size: 14px;
+  color: rgba(255,255,255,0.6);
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #333;
+}
+
+/* Essence Section */
+.essence {
+  background: linear-gradient(135deg, #004d4d 0%, #003d3d 100%);
+  text-align: center;
+}
+
+.essence-content blockquote {
+  font-size: 28px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+}
+
+/* Mission Section */
+.mission {
+  background: #000;
+}
+
+.mission-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.mission-content h2 {
+  text-align: center;
+  color: #00b3b3;
+  margin-bottom: 30px;
+}
+
+.mission-content p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Rules Section */
+.rules {
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+}
+
+.rules-list {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.rule-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+  border-bottom: 1px solid #222;
+}
+
+.rule-number {
+  width: 40px;
+  height: 40px;
+  background: linear-gradient(135deg, #006666, #004d4d);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 16px;
+  flex-shrink: 0;
+}
+
+.rule-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Store Section */
+.store-section {
+  background: #000;
+}
+
+.store-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.store-header h2 {
+  color: #00b3b3;
+  margin-bottom: 10px;
+}
+
+.store-header p {
+  font-size: 18px;
+  color: rgba(255,255,255,0.7);
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.product-card {
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #222;
+  transition: all 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0,102,102,0.2);
+  border-color: #006666;
+}
+
+.product-image {
+  height: 200px;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 20px;
+}
+
+.product-info h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.product-info p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.7);
+  margin-bottom: 15px;
+}
+
+.btn-buy {
+  display: inline-block;
+  padding: 10px 25px;
+  background: linear-gradient(135deg, #006666, #004d4d);
+  color: #fff;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.btn-buy:hover {
+  background: linear-gradient(135deg, #008080, #006666);
+  transform: translateY(-2px);
+}
+
+/* History Section */
+.history {
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+}
+
+.history-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.history-text h2 {
+  color: #00b3b3;
+  margin-bottom: 20px;
+}
+
+.history-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  color: rgba(255,255,255,0.85);
+}
+
+/* Benefits Section */
+.benefits {
+  background: #000;
+}
+
+.benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+}
+
+.benefit-card {
+  background: linear-gradient(135deg, #111 0%, #1a1a1a 100%);
+  padding: 30px 20px;
+  border-radius: 12px;
+  text-align: center;
+  border: 1px solid #222;
+  transition: all 0.3s ease;
+}
+
+.benefit-card:hover {
+  border-color: #006666;
+  transform: translateY(-5px);
+}
+
+.benefit-icon {
+  font-size: 40px;
+  margin-bottom: 15px;
+}
+
+.benefit-card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #00b3b3;
+}
+
+.benefit-card p {
+  font-size: 14px;
+  color: rgba(255,255,255,0.7);
+  line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .styles-grid,
+  .products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .intro-content,
+  .history-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-hero-content h1 {
+    font-size: 36px;
+  }
+
+  .styles-grid,
+  .products-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .essence-content blockquote {
+    font-size: 20px;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Capoeira | Mestre Márcio Mendes</title>
+  <meta name="description" content="Learn about the history and styles of Capoeira - Angola, Regional, and Contemporary.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-container">
+      <a href="../index.html" class="logo">
+        <span class="logo-text">MARCIO<br>MENDES</span>
+        <div class="logo-image">
+          <div class="placeholder-circle">FOTO</div>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <ul class="nav-menu">
+          <li><a href="../index.html">HOME</a></li>
+          <li class="has-submenu">
+            <a href="capoeira.html" class="active">CAPOEIRA <span class="arrow">▼</span></a>
+            <ul class="submenu">
+              <li><a href="capoeira.html">About Capoeira</a></li>
+              <li><a href="muiraquita.html">Muiraquitã Capoeira</a></li>
+              <li><a href="capoeira-angola.html">Capoeira Angola</a></li>
+            </ul>
+          </li>
+          <li><a href="treciral.html">TRECIRAL</a></li>
+          <li><a href="fundation.html">FUNDATION</a></li>
+          <li class="has-submenu">
+            <a href="#">BLOG <span class="arrow">▼</span></a>
+            <ul class="submenu">
+              <li><a href="#" target="_blank">Blog English</a></li>
+              <li><a href="#" target="_blank">Blog Português</a></li>
+            </ul>
+          </li>
+          <li class="has-submenu">
+            <a href="store.html">STORE <span class="arrow">▼</span></a>
+            <ul class="submenu">
+              <li><a href="store.html">Products</a></li>
+              <li><a href="#" target="_blank">Capoeira Class</a></li>
+              <li><a href="#" target="_blank">Meditation Class</a></li>
+              <li><a href="#" target="_blank">Stretching Class</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="language-selector">
+        <button class="lang-btn" onclick="translateTo('en')" title="English">🇺🇸</button>
+        <button class="lang-btn" onclick="translateTo('pt')" title="Português">🇧🇷</button>
+        <button class="lang-btn" onclick="translateTo('es')" title="Español">🇪🇸</button>
+        <button class="lang-btn" onclick="translateTo('fr')" title="Français">🇫🇷</button>
+      </div>
+
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Page Hero -->
+  <section class="page-hero">
+    <div class="page-hero-content">
+      <h1 class="animate-fadeIn">CAPOEIRA</h1>
+      <p class="animate-fadeIn">A living expression of Brazilian culture and history</p>
+    </div>
+  </section>
+
+  <!-- Introduction -->
+  <section class="section page-intro">
+    <div class="container">
+      <div class="intro-content animate-fadeInUp">
+        <div class="intro-image">
+          <div class="placeholder-image large">IMG CAPOEIRA</div>
+        </div>
+        <div class="intro-text">
+          <h2>The Art of Capoeira</h2>
+          <p>Over the centuries, capoeira has evolved into a dynamic cultural expression present on nearly every continent, becoming a symbol of Brazilian identity.</p>
+          <p>Its unique integration of <strong>music, movement, and tradition</strong> distinguishes it from other martial arts and dance forms, creating a practice that is both physically demanding and culturally rich.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Styles Section -->
+  <section class="section styles">
+    <div class="container">
+      <h2 class="section-title text-center animate-fadeIn">Styles of Capoeira</h2>
+
+      <div class="styles-grid">
+        <!-- Angola -->
+        <div class="style-card animate-fadeInUp">
+          <div class="style-image">
+            <div class="placeholder-image">IMG ANGOLA</div>
+          </div>
+          <div class="style-content">
+            <h3>Capoeira Angola</h3>
+            <p>Preserves ancestral roots with movements close to the ground, slow and strategic rhythm. Emphasis on tradition and <em>mandinga</em> (cunning).</p>
+            <p class="style-figure"><strong>Central Figure:</strong> Mestre Pastinha</p>
+          </div>
+        </div>
+
+        <!-- Regional -->
+        <div class="style-card animate-fadeInUp" style="animation-delay: 0.2s">
+          <div class="style-image">
+            <div class="placeholder-image">IMG REGIONAL</div>
+          </div>
+          <div class="style-content">
+            <h3>Capoeira Regional</h3>
+            <p>Developed by Mestre Bimba, incorporates faster and higher kicks with objective attack and defense sequences.</p>
+            <p class="style-figure"><strong>Central Figure:</strong> Mestre Bimba</p>
+          </div>
+        </div>
+
+        <!-- Contemporary -->
+        <div class="style-card animate-fadeInUp" style="animation-delay: 0.4s">
+          <div class="style-image">
+            <div class="placeholder-image">IMG CONTEMPORARY</div>
+          </div>
+          <div class="style-content">
+            <h3>Capoeira Contemporary</h3>
+            <p>Features acrobatics and flourish movements - jumps, spins, and choreographic sequences. Predominant style in demonstrations and competitions.</p>
+            <p class="style-figure"><strong>Focus:</strong> Performance & Athletics</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Essence -->
+  <section class="section essence">
+    <div class="container">
+      <div class="essence-content animate-fadeIn">
+        <blockquote>
+          "All styles maintain the essence: the roda (circle), the music, and the connection between body, mind, and history."
+        </blockquote>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-logo">
+          <span>MARCIO MENDES</span>
+        </div>
+        <div class="footer-links">
+          <a href="#">YouTube</a>
+          <a href="#">Instagram</a>
+          <a href="#">Blog</a>
+        </div>
+        <div class="footer-copy">
+          <p>&copy; 2024 Mestre Márcio Mendes. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <div id="google_translate_element" style="display:none;"></div>
+  <script src="../js/main.js"></script>
+  <script>
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement({
+        pageLanguage: 'en',
+        includedLanguages: 'en,pt,es,fr',
+        autoDisplay: false
+      }, 'google_translate_element');
+    }
+  </script>
+  <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+</html>
