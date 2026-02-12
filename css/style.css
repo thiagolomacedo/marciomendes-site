@@ -625,6 +625,16 @@ ul {
   color: #00b3b3;
 }
 
+.family-image {
+  margin-bottom: 30px;
+}
+
+.family-image img {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+}
+
 @media (max-width: 768px) {
   .content-row {
     flex-direction: column;
