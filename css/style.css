@@ -570,12 +570,12 @@ ul {
 }
 
 .content-image.white-bg {
-  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,0.5) 60%, transparent 100%);
+  background: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.2) 80%, transparent 95%);
 }
 
 /* First PNG image (meditation) - gradient right to left */
 .content-row.reverse .content-image.white-bg {
-  background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,0.5) 60%, transparent 100%);
+  background: linear-gradient(to left, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 20%, rgba(255,255,255,0.6) 50%, rgba(255,255,255,0.2) 80%, transparent 95%);
 }
 
 .content-image.white-bg img {
