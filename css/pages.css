@@ -183,11 +183,16 @@
 }
 
 .symbolism-section .intro-content {
-  align-items: flex-end;
+  align-items: center;
+}
+
+.symbolism-section .intro-text {
+  display: flex;
+  align-items: center;
 }
 
 .symbolism-image img {
-  margin-bottom: 10px;
+  margin-bottom: -2px;
 }
 
 .intro-reverse {
