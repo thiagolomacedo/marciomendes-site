@@ -47,10 +47,12 @@
 /* Logo section centered */
 .intro-logo-section {
   text-align: center;
+  padding-top: 0;
+  margin-top: -40px;
 }
 
 .intro-logo {
-  max-width: 300px;
+  max-width: 360px;
   margin: 0 auto 40px;
 }
 
