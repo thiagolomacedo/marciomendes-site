@@ -1177,3 +1177,29 @@
   color: #333;
   margin-bottom: 20px;
 }
+
+.foundation-image-text {
+  text-align: center;
+}
+
+.foundation-image-center {
+  margin-bottom: 30px;
+}
+
+.foundation-image-center img {
+  max-width: 400px;
+  height: auto;
+}
+
+.foundation-mission-text {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.foundation-mission-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 20px;
+  text-align: justify;
+}
