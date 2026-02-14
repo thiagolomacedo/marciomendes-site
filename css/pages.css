@@ -1164,3 +1164,16 @@
   max-width: 600px;
   height: auto;
 }
+
+.foundation-text-block {
+  max-width: 900px;
+  margin: 40px auto 0;
+  text-align: justify;
+}
+
+.foundation-text-block p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 20px;
+}
