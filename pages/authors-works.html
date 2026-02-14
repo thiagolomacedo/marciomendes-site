@@ -112,8 +112,13 @@
 
         <!-- Book 2 -->
         <div class="book-card animate-fadeInUp" style="animation-delay: 0.2s">
-          <div class="book-cover">
-            <img src="../images/book-great-warrior.png" alt="The Great Warrior Book">
+          <div class="book-cover book-carousel" onclick="toggleBookImage(this)">
+            <img src="../images/book-great-warrior.png" alt="The Great Warrior Book" class="book-img active">
+            <img src="../images/book-great-warrior-2.png" alt="The Great Warrior Book Front" class="book-img">
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
           </div>
           <div class="book-info">
             <h3>The Great Warrior</h3>
