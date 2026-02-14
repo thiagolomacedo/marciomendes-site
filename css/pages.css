@@ -1146,3 +1146,21 @@
     margin: 0 auto;
   }
 }
+
+/* ====================================
+   FOUNDATION PAGE STYLES
+   ==================================== */
+
+.foundation-logo-section {
+  background: #fff;
+  padding: 40px 0;
+}
+
+.foundation-logo-center {
+  text-align: center;
+}
+
+.foundation-logo-center img {
+  max-width: 600px;
+  height: auto;
+}
