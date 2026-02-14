@@ -273,6 +273,11 @@
 
 .angola-logo-section .intro-logo {
   max-width: 350px;
+  margin: 0 auto;
+}
+
+.angola-logo-section .intro-logo-section {
+  text-align: center;
 }
 
 .angola-card-section {
