@@ -177,6 +177,19 @@
   }
 }
 
+/* Symbolism section - image touching bottom */
+.symbolism-section {
+  padding-bottom: 0;
+}
+
+.symbolism-section .intro-content {
+  align-items: flex-end;
+}
+
+.symbolism-image img {
+  margin-bottom: -5px;
+}
+
 .intro-reverse {
   direction: rtl;
 }
