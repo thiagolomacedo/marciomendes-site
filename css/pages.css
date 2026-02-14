@@ -355,8 +355,8 @@
 }
 
 /* Angola page essence */
-.angola-essence {
-  background: linear-gradient(135deg, #8B4513 0%, #5D2E0C 100%);
+.section.essence.angola-essence {
+  background: linear-gradient(135deg, #d4831f 0%, #8B4513 50%, #5D2E0C 100%);
 }
 
 .angola-essence blockquote {
