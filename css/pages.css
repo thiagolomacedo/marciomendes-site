@@ -95,6 +95,12 @@
   border-color: #006666;
 }
 
+.style-image .floating-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .style-content {
   padding: 25px;
 }
