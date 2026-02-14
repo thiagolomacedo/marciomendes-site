@@ -1113,10 +1113,10 @@
 
 .treciral-philosophy-content {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 40px;
+  grid-template-columns: 320px 1fr;
+  gap: 60px;
   align-items: center;
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
