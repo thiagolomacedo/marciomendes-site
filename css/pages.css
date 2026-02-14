@@ -264,7 +264,7 @@
   }
 }
 
-/* Capoeira Angola Page */
+/* Capoeira Angola Page - Orange Theme */
 .angola-logo-section {
   background: #fff;
   padding-top: 250px;
@@ -281,7 +281,7 @@
 }
 
 .angola-card-section {
-  background: #000;
+  background: linear-gradient(180deg, #1a1208 0%, #0d0905 100%);
   padding: 40px 0;
 }
 
@@ -289,8 +289,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
-  border: 1px solid #333;
+  background: linear-gradient(135deg, #1a1510 0%, #0d0a05 100%);
+  border: 1px solid rgba(212, 131, 31, 0.3);
   border-radius: 8px;
   overflow: hidden;
 }
@@ -327,7 +327,7 @@
 }
 
 .philosophy-section {
-  background: #000;
+  background: linear-gradient(180deg, #0d0905 0%, #1a1208 100%);
   padding: 50px 0;
 }
 
@@ -341,8 +341,62 @@
 }
 
 .dark-card .angola-card {
-  background: linear-gradient(135deg, #0a0a0a 0%, #000 100%);
-  border-color: #222;
+  background: linear-gradient(135deg, #1a1510 0%, #0d0a05 100%);
+  border-color: rgba(212, 131, 31, 0.2);
+}
+
+/* Angola page specific rules section */
+.angola-rules .section-title {
+  color: #d4831f;
+}
+
+.angola-rules {
+  background: linear-gradient(180deg, #1a1208 0%, #0d0905 100%);
+}
+
+/* Angola page essence */
+.angola-essence {
+  background: linear-gradient(135deg, #8B4513 0%, #5D2E0C 100%);
+}
+
+.angola-essence blockquote {
+  border-left: 4px solid #d4831f;
+  padding-left: 20px;
+}
+
+/* Angola page orange header */
+.header-angola {
+  background: linear-gradient(180deg, #8B4513 0%, #d4831f 50%, #5D2E0C 100%);
+}
+
+.header-angola .nav-menu a {
+  color: #fff;
+}
+
+.header-angola .nav-menu a:hover,
+.header-angola .nav-menu a.active {
+  color: #FFD700;
+}
+
+.header-angola .submenu {
+  background: #5D2E0C;
+}
+
+.header-angola .submenu a:hover {
+  background: rgba(212, 131, 31, 0.3);
+}
+
+.header-angola .lang-dropdown-btn {
+  background: rgba(255,255,255,0.15);
+  border-color: rgba(255,255,255,0.3);
+}
+
+.header-angola .lang-dropdown-menu {
+  background: #5D2E0C;
+}
+
+.header-angola .lang-option:hover {
+  background: rgba(212, 131, 31, 0.3);
 }
 
 @media (max-width: 768px) {
