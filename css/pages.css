@@ -44,6 +44,18 @@
   display: block;
 }
 
+.intro-reverse {
+  direction: rtl;
+}
+
+.intro-reverse > * {
+  direction: ltr;
+}
+
+.essence-final {
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+}
+
 .intro-text h2 {
   font-size: 32px;
   margin-bottom: 20px;
