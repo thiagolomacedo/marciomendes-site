@@ -121,3 +121,25 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     }
   });
 });
+
+// Book Carousel Toggle
+function toggleBookImage(carousel) {
+  const images = carousel.querySelectorAll('.book-img');
+  const dots = carousel.querySelectorAll('.dot');
+
+  let currentIndex = 0;
+  images.forEach((img, index) => {
+    if (img.classList.contains('active')) {
+      currentIndex = index;
+    }
+  });
+
+  // Remove active from current
+  images[currentIndex].classList.remove('active');
+  dots[currentIndex].classList.remove('active');
+
+  // Add active to next
+  const nextIndex = (currentIndex + 1) % images.length;
+  images[nextIndex].classList.add('active');
+  dots[nextIndex].classList.add('active');
+}

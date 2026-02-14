@@ -95,8 +95,13 @@
       <div class="books-grid">
         <!-- Book 1 -->
         <div class="book-card animate-fadeInUp">
-          <div class="book-cover">
-            <img src="../images/book-treciral-initiation.png" alt="TRECIRAL Initiation Book">
+          <div class="book-cover book-carousel" onclick="toggleBookImage(this)">
+            <img src="../images/book-treciral-initiation.png" alt="TRECIRAL Initiation Book" class="book-img active">
+            <img src="../images/book-treciral-initiation-2.png" alt="TRECIRAL Initiation Book Front" class="book-img">
+            <div class="carousel-dots">
+              <span class="dot active"></span>
+              <span class="dot"></span>
+            </div>
           </div>
           <div class="book-info">
             <h3>TRECIRAL Initiation</h3>

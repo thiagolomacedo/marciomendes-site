@@ -940,6 +940,39 @@
   display: block;
 }
 
+.book-carousel {
+  position: relative;
+  cursor: pointer;
+}
+
+.book-carousel .book-img {
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.book-carousel .book-img.active {
+  display: block;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 15px;
+}
+
+.carousel-dots .dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.3);
+  transition: background 0.3s ease;
+}
+
+.carousel-dots .dot.active {
+  background: #00b3b3;
+}
+
 .placeholder-image.book {
   height: 400px;
   max-width: 280px;
