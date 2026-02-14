@@ -44,6 +44,37 @@
   display: block;
 }
 
+/* Logo section centered */
+.intro-logo-section {
+  text-align: center;
+}
+
+.intro-logo {
+  max-width: 300px;
+  margin: 0 auto 40px;
+}
+
+.intro-logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.intro-text-full {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: justify;
+}
+
+.intro-text-full p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+}
+
+.legend-section {
+  background: linear-gradient(135deg, #004d4d 0%, #003d3d 100%);
+}
+
 .intro-reverse {
   direction: rtl;
 }
