@@ -1203,3 +1203,17 @@
   margin-bottom: 20px;
   text-align: justify;
 }
+
+.intro-reverse {
+  direction: rtl;
+}
+
+.intro-reverse > * {
+  direction: ltr;
+}
+
+.rounded-image {
+  border-radius: 10%;
+  max-width: 100%;
+  height: auto;
+}
