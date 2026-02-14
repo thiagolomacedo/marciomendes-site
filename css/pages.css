@@ -264,6 +264,82 @@
   }
 }
 
+/* Capoeira Angola Page */
+.angola-card-section {
+  background: #000;
+  padding: 40px 0;
+}
+
+.angola-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  background: linear-gradient(135deg, #1a1a1a 0%, #0d0d0d 100%);
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.angola-card.reverse {
+  direction: rtl;
+}
+
+.angola-card.reverse > * {
+  direction: ltr;
+}
+
+.angola-card-text {
+  padding: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.angola-card-text p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+  text-align: justify;
+}
+
+.highlight-orange {
+  color: #d4831f;
+}
+
+.angola-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.philosophy-section {
+  background: #000;
+  padding: 50px 0;
+}
+
+.philosophy-text {
+  font-size: 17px;
+  line-height: 1.9;
+  color: rgba(255,255,255,0.85);
+  text-align: justify;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.dark-card .angola-card {
+  background: linear-gradient(135deg, #0a0a0a 0%, #000 100%);
+  border-color: #222;
+}
+
+@media (max-width: 768px) {
+  .angola-card {
+    grid-template-columns: 1fr;
+  }
+
+  .angola-card.reverse {
+    direction: ltr;
+  }
+}
+
 .intro-reverse {
   direction: rtl;
 }
