@@ -917,9 +917,9 @@
 
 .books-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  max-width: 900px;
+  grid-template-columns: 1fr;
+  gap: 80px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -932,7 +932,7 @@
 }
 
 .book-cover img {
-  max-width: 280px;
+  max-width: 380px;
   height: auto;
   margin: 0 auto;
   border-radius: 8px;
