@@ -267,8 +267,8 @@
 /* Capoeira Angola Page */
 .angola-logo-section {
   background: #fff;
-  padding: 180px 0 30px;
-  margin-top: -100px;
+  padding-top: 180px;
+  padding-bottom: 80px;
 }
 
 .angola-logo-section .intro-logo {
