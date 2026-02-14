@@ -931,6 +931,15 @@
   margin-bottom: 25px;
 }
 
+.book-cover img {
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+  display: block;
+}
+
 .placeholder-image.book {
   height: 400px;
   max-width: 280px;
