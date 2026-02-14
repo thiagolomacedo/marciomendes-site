@@ -77,6 +77,47 @@
   background: linear-gradient(135deg, #004d4d 0%, #003d3d 100%);
 }
 
+/* White card box */
+.white-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 50px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.white-card .card-image img {
+  max-width: 280px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.white-card .card-text {
+  color: #333;
+}
+
+.white-card .card-text h3 {
+  color: #004d4d;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.white-card .card-text h4 {
+  color: #006666;
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.white-card .card-text p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.8;
+  text-align: justify;
+}
+
 .intro-reverse {
   direction: rtl;
 }
