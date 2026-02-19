@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Store Test | Ko-fi Embed</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: #0a0a0a;
+      color: #fff;
+    }
+    .header {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      border-bottom: 1px solid #333;
+    }
+    .header h1 {
+      color: #00b3b3;
+    }
+    .store-container {
+      width: 100%;
+      min-height: calc(100vh - 80px);
+      background: #fff;
+    }
+    .store-iframe {
+      width: 100%;
+      height: calc(100vh - 80px);
+      border: none;
+      background: #fff;
+    }
+    .error-msg {
+      display: none;
+      padding: 40px;
+      text-align: center;
+      background: #1a1a1a;
+    }
+    .error-msg h2 {
+      color: #ff6b6b;
+      margin-bottom: 15px;
+    }
+    .error-msg p {
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>STORE - Ko-fi Embed Test</h1>
+    <p>Testando iframe do Ko-fi Shop</p>
+  </div>
+
+  <div class="store-container">
+    <iframe
+      class="store-iframe"
+      src="https://ko-fi.com/ltdigitais/shop"
+      title="Ko-fi Shop"
+      loading="lazy"
+      allow="payment"
+    ></iframe>
+  </div>
+
+  <div class="error-msg" id="errorMsg">
+    <h2>Iframe Bloqueado</h2>
+    <p>Ko-fi não permite embed. Vamos usar Gumroad.</p>
+  </div>
+
+  <script>
+    // Detectar se iframe foi bloqueado
+    const iframe = document.querySelector('.store-iframe');
+    iframe.onerror = function() {
+      document.getElementById('errorMsg').style.display = 'block';
+      iframe.style.display = 'none';
+    };
+  </script>
+
+</body>
+</html>
