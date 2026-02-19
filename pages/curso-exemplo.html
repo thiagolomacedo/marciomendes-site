@@ -62,15 +62,34 @@
       font-size: 0.9rem;
     }
 
-    .user-avatar {
-      width: 35px;
-      height: 35px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #00b3b3, #008080);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: bold;
+    .btn-voltar {
+      padding: 8px 16px;
+      background: transparent;
+      border: 1px solid #00b3b3;
+      border-radius: 6px;
+      color: #00b3b3;
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: all 0.3s;
+    }
+
+    .btn-voltar:hover {
+      background: rgba(0, 179, 179, 0.1);
+    }
+
+    .btn-sair {
+      padding: 8px 16px;
+      background: transparent;
+      border: 1px solid #ff6b6b;
+      border-radius: 6px;
+      color: #ff6b6b;
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .btn-sair:hover {
+      background: rgba(255, 107, 107, 0.1);
     }
 
     /* Hero do Curso */
@@ -616,13 +635,13 @@
 
   <!-- Header -->
   <header class="header">
-    <a href="#" class="logo">
+    <a href="store.html" class="logo">
       <img src="../images/marcio-profile.jpg" alt="Mestre Márcio" class="logo-img">
       <span class="logo-text">MÁRCIO MENDES</span>
     </a>
     <div class="user-info">
-      <span>Olá, Aluno</span>
-      <div class="user-avatar">A</div>
+      <a href="store.html" class="btn-voltar">Voltar ao Site</a>
+      <button onclick="logout()" class="btn-sair">Sair</button>
     </div>
   </header>
 
@@ -1042,6 +1061,11 @@
       if (event.key === 'Enter') {
         checkPassword();
       }
+    }
+
+    function logout() {
+      sessionStorage.removeItem('cursoLogado');
+      location.reload();
     }
 
     function toggleLesson(header) {
