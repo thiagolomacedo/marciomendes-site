@@ -1,0 +1,1062 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curso de Capoeira | Mestre Márcio Mendes</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Assistant', sans-serif;
+      background: linear-gradient(135deg, #0a0a0a 0%, #0d1f1f 50%, #0a0a0a 100%);
+      color: #fff;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    .header {
+      background: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(10px);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(0, 179, 179, 0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .logo-img {
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid #00b3b3;
+    }
+
+    .logo-text {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: #00b3b3;
+    }
+
+    .user-info {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    .user-avatar {
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #00b3b3, #008080);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+    }
+
+    /* Hero do Curso */
+    .course-hero {
+      background: linear-gradient(135deg, rgba(0, 179, 179, 0.2) 0%, rgba(0, 0, 0, 0.8) 100%);
+      padding: 60px 40px;
+      text-align: center;
+      border-bottom: 1px solid rgba(0, 179, 179, 0.2);
+    }
+
+    .course-hero h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .course-hero h1 span {
+      color: #00b3b3;
+    }
+
+    .course-hero p {
+      font-size: 1.2rem;
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .course-stats {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 30px;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #00b3b3;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: #666;
+    }
+
+    /* Container Principal */
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+
+    /* Mensagem de Boas-vindas */
+    .welcome {
+      background: rgba(0, 179, 179, 0.1);
+      border: 1px solid rgba(0, 179, 179, 0.3);
+      border-radius: 12px;
+      padding: 25px;
+      margin-bottom: 40px;
+      text-align: center;
+    }
+
+    .welcome p {
+      color: #ccc;
+      font-size: 1rem;
+    }
+
+    .welcome strong {
+      color: #00b3b3;
+    }
+
+    /* Módulos */
+    .module {
+      margin-bottom: 40px;
+    }
+
+    .module-header {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid #00b3b3;
+    }
+
+    .module-icon {
+      font-size: 1.5rem;
+    }
+
+    .module-title {
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #00b3b3;
+    }
+
+    .module-count {
+      background: rgba(0, 179, 179, 0.2);
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: #00b3b3;
+    }
+
+    /* Aulas */
+    .lessons {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .lesson {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .lesson:hover {
+      border-color: rgba(0, 179, 179, 0.5);
+      transform: translateX(5px);
+    }
+
+    .lesson-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px;
+      cursor: pointer;
+    }
+
+    .lesson-info {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .lesson-number {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, #00b3b3, #008080);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .lesson-title {
+      font-weight: 600;
+      color: #fff;
+    }
+
+    .lesson-meta {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .lesson-duration {
+      color: #666;
+      font-size: 0.85rem;
+    }
+
+    .lesson-status {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      border: 2px solid #333;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+    }
+
+    .lesson-status.completed {
+      background: #00b3b3;
+      border-color: #00b3b3;
+    }
+
+    .lesson-content {
+      display: none;
+      padding: 0 20px 20px;
+    }
+
+    .lesson.active .lesson-content {
+      display: block;
+    }
+
+    .video-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 56.25%;
+      background: #000;
+      border-radius: 8px;
+      overflow: hidden;
+      margin-bottom: 15px;
+    }
+
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+
+    .video-placeholder {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+      color: #444;
+      font-size: 3rem;
+    }
+
+    .lesson-description {
+      color: #888;
+      font-size: 0.9rem;
+    }
+
+    /* Materiais */
+    .materials {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      padding: 25px;
+      margin-top: 40px;
+    }
+
+    .materials-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #00b3b3;
+      margin-bottom: 20px;
+    }
+
+    .material-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px;
+      background: rgba(0, 0, 0, 0.3);
+      border-radius: 8px;
+      margin-bottom: 10px;
+      transition: all 0.2s;
+    }
+
+    .material-item:hover {
+      background: rgba(0, 179, 179, 0.1);
+    }
+
+    .material-info {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .material-icon {
+      font-size: 1.5rem;
+    }
+
+    .material-name {
+      color: #fff;
+      font-weight: 500;
+    }
+
+    .material-size {
+      color: #666;
+      font-size: 0.8rem;
+    }
+
+    .btn-download {
+      padding: 8px 20px;
+      background: linear-gradient(135deg, #00b3b3, #008080);
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .btn-download:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 4px 15px rgba(0, 179, 179, 0.4);
+    }
+
+    /* Contato */
+    .contact {
+      text-align: center;
+      margin-top: 50px;
+      padding: 30px;
+      background: rgba(0, 179, 179, 0.05);
+      border-radius: 12px;
+      border: 1px solid rgba(0, 179, 179, 0.2);
+    }
+
+    .contact h3 {
+      color: #00b3b3;
+      margin-bottom: 15px;
+    }
+
+    .contact p {
+      color: #888;
+      margin-bottom: 20px;
+    }
+
+    .contact-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .contact-link {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      transition: all 0.2s;
+    }
+
+    .contact-link:hover {
+      background: rgba(0, 179, 179, 0.2);
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 30px;
+      color: #444;
+      font-size: 0.85rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      margin-top: 50px;
+    }
+
+    /* Progresso */
+    .progress-bar {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      height: 8px;
+      margin-top: 20px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: linear-gradient(90deg, #00b3b3, #00e6e6);
+      width: 30%;
+      border-radius: 10px;
+      transition: width 0.5s ease;
+    }
+
+    .progress-text {
+      text-align: right;
+      color: #00b3b3;
+      font-size: 0.85rem;
+      margin-top: 8px;
+    }
+
+    /* Responsivo */
+    @media (max-width: 768px) {
+      .header {
+        padding: 15px 20px;
+      }
+
+      .course-hero {
+        padding: 40px 20px;
+      }
+
+      .course-hero h1 {
+        font-size: 1.8rem;
+      }
+
+      .course-stats {
+        gap: 20px;
+      }
+
+      .stat-number {
+        font-size: 1.5rem;
+      }
+
+      .lesson-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+      }
+
+      .lesson-meta {
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      .contact-links {
+        flex-direction: column;
+      }
+    }
+    /* Tela de Login */
+    .login-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(135deg, #0a0a0a 0%, #0d1f1f 50%, #0a0a0a 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    .login-overlay.hidden {
+      display: none;
+    }
+
+    .login-box {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(0, 179, 179, 0.3);
+      border-radius: 20px;
+      padding: 50px 40px;
+      text-align: center;
+      max-width: 400px;
+      width: 90%;
+    }
+
+    .login-logo {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      border: 3px solid #00b3b3;
+      margin-bottom: 20px;
+    }
+
+    .login-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 10px;
+    }
+
+    .login-subtitle {
+      color: #888;
+      margin-bottom: 30px;
+      font-size: 0.95rem;
+    }
+
+    .login-input {
+      width: 100%;
+      padding: 15px 20px;
+      background: rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1rem;
+      text-align: center;
+      margin-bottom: 15px;
+      outline: none;
+      transition: border-color 0.3s;
+    }
+
+    .login-input:focus {
+      border-color: #00b3b3;
+    }
+
+    .login-input::placeholder {
+      color: #555;
+    }
+
+    .login-btn {
+      width: 100%;
+      padding: 15px;
+      background: linear-gradient(135deg, #00b3b3, #008080);
+      border: none;
+      border-radius: 10px;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .login-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 20px rgba(0, 179, 179, 0.4);
+    }
+
+    .login-error {
+      color: #ff6b6b;
+      font-size: 0.9rem;
+      margin-top: 15px;
+      display: none;
+    }
+
+    .login-error.show {
+      display: block;
+    }
+
+    /* Conteúdo oculto até login */
+    .content-wrapper {
+      display: none;
+    }
+
+    .content-wrapper.visible {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Tela de Login -->
+  <div class="login-overlay" id="loginOverlay">
+    <div class="login-box">
+      <img src="../images/marcio-profile.jpg" alt="Mestre Márcio" class="login-logo">
+      <h1 class="login-title">Curso de Capoeira</h1>
+      <p class="login-subtitle">Digite a senha de acesso enviada por e-mail</p>
+      <input type="password" class="login-input" id="passwordInput" placeholder="Digite a senha..." onkeypress="handleKeyPress(event)">
+      <button class="login-btn" onclick="checkPassword()">Acessar Curso</button>
+      <p class="login-error" id="loginError">Senha incorreta. Tente novamente.</p>
+    </div>
+  </div>
+
+  <!-- Conteúdo do Curso (oculto até login) -->
+  <div class="content-wrapper" id="contentWrapper">
+
+  <!-- Header -->
+  <header class="header">
+    <a href="#" class="logo">
+      <img src="../images/marcio-profile.jpg" alt="Mestre Márcio" class="logo-img">
+      <span class="logo-text">MÁRCIO MENDES</span>
+    </a>
+    <div class="user-info">
+      <span>Olá, Aluno</span>
+      <div class="user-avatar">A</div>
+    </div>
+  </header>
+
+  <!-- Hero do Curso -->
+  <section class="course-hero">
+    <h1>Curso de <span>Capoeira</span></h1>
+    <p>com Mestre Márcio Mendes</p>
+
+    <div class="course-stats">
+      <div class="stat">
+        <div class="stat-number">10</div>
+        <div class="stat-label">Aulas</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">3h</div>
+        <div class="stat-label">Duração</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">3</div>
+        <div class="stat-label">Módulos</div>
+      </div>
+      <div class="stat">
+        <div class="stat-number">5</div>
+        <div class="stat-label">PDFs</div>
+      </div>
+    </div>
+
+    <div class="progress-bar">
+      <div class="progress-fill"></div>
+    </div>
+    <div class="progress-text">3 de 10 aulas concluídas (30%)</div>
+  </section>
+
+  <!-- Container Principal -->
+  <div class="container">
+
+    <!-- Boas-vindas -->
+    <div class="welcome">
+      <p>Bem-vindo ao curso! Aqui você encontra todas as aulas organizadas por módulos.<br>
+      <strong>Bons treinos e axé!</strong> 🙏</p>
+    </div>
+
+    <!-- Módulo 1 -->
+    <div class="module">
+      <div class="module-header">
+        <span class="module-icon">📚</span>
+        <h2 class="module-title">Módulo 1 - Fundamentos da Capoeira</h2>
+        <span class="module-count">4 aulas</span>
+      </div>
+
+      <div class="lessons">
+        <div class="lesson active">
+          <div class="lesson-header" onclick="toggleLesson(this)">
+            <div class="lesson-info">
+              <div class="lesson-number">1</div>
+              <span class="lesson-title">História e Origem da Capoeira</span>
+            </div>
+            <div class="lesson-meta">
+              <span class="lesson-duration">⏱️ 15:32</span>
+              <div class="lesson-status completed">✓</div>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="video-container">
+              <div class="video-placeholder">▶️</div>
+              <!-- Quando tiver o vídeo real, substitua por:
+              <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen></iframe>
+              -->
+            </div>
+            <p class="lesson-description">
+              Nesta aula, você vai conhecer a história da capoeira desde suas raízes africanas
+              até os dias de hoje. Entenda como essa arte marcial se tornou patrimônio cultural
+              do Brasil.
+            </p>
+          </div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-header" onclick="toggleLesson(this)">
+            <div class="lesson-info">
+              <div class="lesson-number">2</div>
+              <span class="lesson-title">A Ginga - Base de Todo Movimento</span>
+            </div>
+            <div class="lesson-meta">
+              <span class="lesson-duration">⏱️ 12:45</span>
+              <div class="lesson-status completed">✓</div>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="video-container">
+              <iframe width="100%" height="100%" src="https://www.youtube.com/embed/HxDS6_Ig7IE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+            <p class="lesson-description">
+              Aprenda a ginga, o movimento fundamental da capoeira. A ginga é a base de onde
+              partem todos os outros movimentos, ataques e defesas.
+            </p>
+          </div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-header" onclick="toggleLesson(this)">
+            <div class="lesson-info">
+              <div class="lesson-number">3</div>
+              <span class="lesson-title">Movimentos Básicos de Ataque</span>
+            </div>
+            <div class="lesson-meta">
+              <span class="lesson-duration">⏱️ 18:20</span>
+              <div class="lesson-status completed">✓</div>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="video-container">
+              <div class="video-placeholder">▶️</div>
+            </div>
+            <p class="lesson-description">
+              Conheça os principais golpes da capoeira: meia-lua de frente, armada, queixada,
+              benção e martelo. Demonstrações detalhadas de cada movimento.
+            </p>
+          </div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-header" onclick="toggleLesson(this)">
+            <div class="lesson-info">
+              <div class="lesson-number">4</div>
+              <span class="lesson-title">Esquivas e Defesas</span>
+            </div>
+            <div class="lesson-meta">
+              <span class="lesson-duration">⏱️ 14:10</span>
+              <div class="lesson-status"></div>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="video-container">
+              <div class="video-placeholder">▶️</div>
+            </div>
+            <p class="lesson-description">
+              Aprenda as principais esquivas: cocorinha, negativa, resistência e rolê.
+              Saiba como se defender dos golpes com fluidez e elegância.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Módulo 2 -->
+    <div class="module">
+      <div class="module-header">
+        <span class="module-icon">🎵</span>
+        <h2 class="module-title">Módulo 2 - Instrumentos e Música</h2>
+        <span class="module-count">3 aulas</span>
+      </div>
+
+      <div class="lessons">
+        <div class="lesson">
+          <div class="lesson-header" onclick="toggleLesson(this)">
+            <div class="lesson-info">
+              <div class="lesson-number">5</div>
+              <span class="lesson-title">Conhecendo o Berimbau</span>
+            </div>
+            <div class="lesson-meta">
+              <span class="lesson-duration">⏱️ 20:15</span>
+              <div class="lesson-status"></div>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="video-container">
+              <div class="video-placeholder">▶️</div>
+            </div>
+            <p class="lesson-description">
+              O berimbau é a alma da roda de capoeira. Aprenda sobre suas partes,
+              como segurar e os primeiros toques básicos.
+            </p>
+          </div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-header" onclick="toggleLesson(this)">
+            <div class="lesson-info">
+              <div class="lesson-number">6</div>
+              <span class="lesson-title">Toques de Berimbau</span>
+            </div>
+            <div class="lesson-meta">
+              <span class="lesson-duration">⏱️ 25:00</span>
+              <div class="lesson-status"></div>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="video-container">
+              <div class="video-placeholder">▶️</div>
+            </div>
+            <p class="lesson-description">
+              Aprenda os toques tradicionais: Angola, São Bento Grande, São Bento Pequeno,
+              Iúna e Cavalaria. Cada toque tem seu significado na roda.
+            </p>
+          </div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-header" onclick="toggleLesson(this)">
+            <div class="lesson-info">
+              <div class="lesson-number">7</div>
+              <span class="lesson-title">Pandeiro, Atabaque e Agogô</span>
+            </div>
+            <div class="lesson-meta">
+              <span class="lesson-duration">⏱️ 15:40</span>
+              <div class="lesson-status"></div>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="video-container">
+              <div class="video-placeholder">▶️</div>
+            </div>
+            <p class="lesson-description">
+              Conheça os outros instrumentos da bateria de capoeira e como cada um
+              contribui para a energia da roda.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Módulo 3 -->
+    <div class="module">
+      <div class="module-header">
+        <span class="module-icon">🎤</span>
+        <h2 class="module-title">Módulo 3 - Cantigas e Tradição</h2>
+        <span class="module-count">3 aulas</span>
+      </div>
+
+      <div class="lessons">
+        <div class="lesson">
+          <div class="lesson-header" onclick="toggleLesson(this)">
+            <div class="lesson-info">
+              <div class="lesson-number">8</div>
+              <span class="lesson-title">Ladainhas Tradicionais</span>
+            </div>
+            <div class="lesson-meta">
+              <span class="lesson-duration">⏱️ 12:00</span>
+              <div class="lesson-status"></div>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="video-container">
+              <div class="video-placeholder">▶️</div>
+            </div>
+            <p class="lesson-description">
+              A ladainha é o canto de abertura da roda. Aprenda as ladainhas tradicionais
+              e seu significado histórico e espiritual.
+            </p>
+          </div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-header" onclick="toggleLesson(this)">
+            <div class="lesson-info">
+              <div class="lesson-number">9</div>
+              <span class="lesson-title">Corridos e Respostas</span>
+            </div>
+            <div class="lesson-meta">
+              <span class="lesson-duration">⏱️ 14:30</span>
+              <div class="lesson-status"></div>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="video-container">
+              <div class="video-placeholder">▶️</div>
+            </div>
+            <p class="lesson-description">
+              Os corridos são cantos de pergunta e resposta que mantêm a energia da roda.
+              Aprenda os mais populares e como participar do coro.
+            </p>
+          </div>
+        </div>
+
+        <div class="lesson">
+          <div class="lesson-header" onclick="toggleLesson(this)">
+            <div class="lesson-info">
+              <div class="lesson-number">10</div>
+              <span class="lesson-title">A Roda de Capoeira - Ritual Completo</span>
+            </div>
+            <div class="lesson-meta">
+              <span class="lesson-duration">⏱️ 22:00</span>
+              <div class="lesson-status"></div>
+            </div>
+          </div>
+          <div class="lesson-content">
+            <div class="video-container">
+              <div class="video-placeholder">▶️</div>
+            </div>
+            <p class="lesson-description">
+              Entenda o ritual completo da roda de capoeira: a formação, a chamada,
+              o jogo e a despedida. Tudo que você precisa saber para participar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Materiais de Apoio -->
+    <div class="materials">
+      <h3 class="materials-title">
+        <span>📥</span> Materiais de Apoio
+      </h3>
+
+      <div class="material-item">
+        <div class="material-info">
+          <span class="material-icon">📄</span>
+          <div>
+            <div class="material-name">Letras das Músicas Tradicionais</div>
+            <div class="material-size">PDF • 2.3 MB</div>
+          </div>
+        </div>
+        <a href="#" class="btn-download">Download</a>
+      </div>
+
+      <div class="material-item">
+        <div class="material-info">
+          <span class="material-icon">📄</span>
+          <div>
+            <div class="material-name">Guia de Movimentos Ilustrado</div>
+            <div class="material-size">PDF • 5.1 MB</div>
+          </div>
+        </div>
+        <a href="#" class="btn-download">Download</a>
+      </div>
+
+      <div class="material-item">
+        <div class="material-info">
+          <span class="material-icon">📄</span>
+          <div>
+            <div class="material-name">História da Capoeira Angola</div>
+            <div class="material-size">PDF • 1.8 MB</div>
+          </div>
+        </div>
+        <a href="#" class="btn-download">Download</a>
+      </div>
+
+      <div class="material-item">
+        <div class="material-info">
+          <span class="material-icon">📄</span>
+          <div>
+            <div class="material-name">Glossário de Termos da Capoeira</div>
+            <div class="material-size">PDF • 890 KB</div>
+          </div>
+        </div>
+        <a href="#" class="btn-download">Download</a>
+      </div>
+
+      <div class="material-item">
+        <div class="material-info">
+          <span class="material-icon">🎵</span>
+          <div>
+            <div class="material-name">Áudios - Toques de Berimbau</div>
+            <div class="material-size">ZIP • 15.2 MB</div>
+          </div>
+        </div>
+        <a href="#" class="btn-download">Download</a>
+      </div>
+    </div>
+
+    <!-- Contato -->
+    <div class="contact">
+      <h3>💬 Dúvidas?</h3>
+      <p>Entre em contato com Mestre Márcio Mendes</p>
+      <div class="contact-links">
+        <a href="mailto:marciomendes@email.com" class="contact-link">
+          <span>📧</span> marciomendes@email.com
+        </a>
+        <a href="https://instagram.com/mestremarciomendes" target="_blank" class="contact-link">
+          <span>📱</span> @mestremarciomendes
+        </a>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2024 Mestre Márcio Mendes. Todos os direitos reservados.</p>
+    <p>Este conteúdo é exclusivo para alunos matriculados.</p>
+  </footer>
+
+  </div> <!-- Fim content-wrapper -->
+
+  <script>
+    // =============================================
+    // SENHA DO CURSO - Altere aqui quando necessário
+    // =============================================
+    const SENHA_CURSO = 'capoeira2024';
+    // =============================================
+
+    // Verifica se já está logado (sessão)
+    if (sessionStorage.getItem('cursoLogado') === 'true') {
+      document.getElementById('loginOverlay').classList.add('hidden');
+      document.getElementById('contentWrapper').classList.add('visible');
+    }
+
+    function checkPassword() {
+      const input = document.getElementById('passwordInput');
+      const error = document.getElementById('loginError');
+
+      if (input.value === SENHA_CURSO) {
+        // Login bem-sucedido
+        sessionStorage.setItem('cursoLogado', 'true');
+        document.getElementById('loginOverlay').classList.add('hidden');
+        document.getElementById('contentWrapper').classList.add('visible');
+      } else {
+        // Senha incorreta
+        error.classList.add('show');
+        input.value = '';
+        input.focus();
+      }
+    }
+
+    function handleKeyPress(event) {
+      if (event.key === 'Enter') {
+        checkPassword();
+      }
+    }
+
+    function toggleLesson(header) {
+      const lesson = header.parentElement;
+      const wasActive = lesson.classList.contains('active');
+
+      // Fecha todas as aulas
+      document.querySelectorAll('.lesson').forEach(l => l.classList.remove('active'));
+
+      // Abre a clicada (se não estava aberta)
+      if (!wasActive) {
+        lesson.classList.add('active');
+      }
+    }
+  </script>
+
+</body>
+</html>
