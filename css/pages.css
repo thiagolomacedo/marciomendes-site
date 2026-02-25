@@ -1370,22 +1370,19 @@
   font-size: 48px;
   text-align: center;
   font-weight: 300;
-  letter-spacing: 3px;
-  background: linear-gradient(135deg, #00d4d4 0%, #00b3b3 50%, #008080 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  text-shadow: 0 0 60px rgba(0, 179, 179, 0.3);
+  letter-spacing: 4px;
+  color: #00b3b3;
   position: relative;
+  filter: drop-shadow(0 0 20px rgba(0, 179, 179, 0.4));
 }
 
 .key-benefits-title .big-title::after {
   content: '';
   display: block;
-  width: 80px;
-  height: 2px;
+  width: 100px;
+  height: 1px;
   background: linear-gradient(90deg, transparent, #00b3b3, transparent);
-  margin: 25px auto 0;
+  margin: 30px auto 0;
 }
 
 /* Benefit Sections */
