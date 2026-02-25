@@ -1304,7 +1304,6 @@
 .top-image-wrapper img {
   max-width: 300px;
   height: auto;
-  animation: floating 4s ease-in-out infinite;
 }
 
 @keyframes floating {
@@ -1314,6 +1313,10 @@
   50% {
     transform: translateY(-15px);
   }
+}
+
+.floating-img {
+  animation: floating 4s ease-in-out infinite;
 }
 
 .top-image-wrapper .placeholder-image {
