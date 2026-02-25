@@ -1291,23 +1291,150 @@
 
 /* ==================== MEDITATION CLASS ==================== */
 
-/* Benefits Grid 5 */
-.benefits-5 {
+/* Meditation Intro */
+.meditation-intro {
+  padding: 80px 0;
+}
+
+.meditation-intro .intro-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.meditation-intro h2 {
+  color: #00b3b3;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.meditation-intro h3 {
+  color: #00b3b3;
+  font-size: 24px;
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+
+.meditation-intro p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 15px;
+}
+
+/* Benefit Sections */
+.benefit-section {
+  padding: 80px 0;
+}
+
+.benefit-section.dark-bg {
+  background: linear-gradient(135deg, #0a0a0a 0%, #111 100%);
+}
+
+.benefit-section.blue-gradient-bg {
+  background: linear-gradient(135deg, #0a1a2a 0%, #0d1f3c 100%);
+}
+
+.benefit-row {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
 }
 
-.benefits-5 .benefit-card {
-  padding: 25px 20px;
+.benefit-row.reverse {
+  direction: rtl;
 }
 
-.benefits-5 .benefit-card h3 {
-  font-size: 16px;
+.benefit-row.reverse > * {
+  direction: ltr;
 }
 
-.benefits-5 .benefit-card p {
-  font-size: 14px;
+.benefit-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.benefit-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.benefit-image .placeholder-image {
+  width: 100%;
+  height: 300px;
+  border-radius: 12px;
+}
+
+.benefit-text h3 {
+  color: #00b3b3;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.benefit-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 15px;
+}
+
+/* Instructor Section */
+.instructor-section {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
+}
+
+.instructor-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
+.instructor-row:last-child {
+  margin-bottom: 0;
+}
+
+.instructor-row.reverse {
+  direction: rtl;
+}
+
+.instructor-row.reverse > * {
+  direction: ltr;
+}
+
+.instructor-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.instructor-image img {
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+}
+
+.instructor-image .placeholder-image {
+  width: 100%;
+  height: 350px;
+  border-radius: 12px;
+}
+
+.instructor-text h3 {
+  color: #00b3b3;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.instructor-text p {
+  font-size: 17px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 15px;
 }
 
 /* Source text (citations) */
@@ -1450,15 +1577,16 @@
 }
 
 /* Responsive Meditation */
-@media (max-width: 1200px) {
-  .benefits-5 {
-    grid-template-columns: repeat(3, 1fr);
-  }
-}
-
 @media (max-width: 900px) {
-  .benefits-5 {
-    grid-template-columns: repeat(2, 1fr);
+  .benefit-row,
+  .instructor-row {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .benefit-row.reverse,
+  .instructor-row.reverse {
+    direction: ltr;
   }
 
   .content-row {
@@ -1474,15 +1602,29 @@
     grid-template-columns: 1fr;
     max-width: 400px;
   }
+
+  .benefit-text h3,
+  .instructor-text h3 {
+    font-size: 24px;
+  }
 }
 
 @media (max-width: 600px) {
-  .benefits-5 {
-    grid-template-columns: 1fr;
+  .meditation-intro h2 {
+    font-size: 26px;
+  }
+
+  .meditation-intro h3 {
+    font-size: 20px;
   }
 
   .tribute-text {
     font-size: 16px;
     padding-left: 20px;
+  }
+
+  .benefit-section,
+  .instructor-section {
+    padding: 50px 0;
   }
 }
