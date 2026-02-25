@@ -1411,6 +1411,15 @@
   width: 150px;
 }
 
+.key-benefits-title .benefits-intro {
+  text-align: center;
+  color: rgba(255,255,255,0.7);
+  font-size: 18px;
+  max-width: 700px;
+  margin: 30px auto 0;
+  line-height: 1.7;
+}
+
 /* Benefit Sections */
 .benefit-section {
   padding: 80px 0;
