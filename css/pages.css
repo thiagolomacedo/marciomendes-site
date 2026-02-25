@@ -1928,6 +1928,22 @@
   line-height: 1.8;
 }
 
+/* Stretching section title */
+.stretching-section-title {
+  color: #333;
+  font-size: 22px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.stretching-subtitle {
+  color: #444;
+  font-size: 16px;
+  text-align: center;
+  font-weight: 600;
+}
+
 /* Stretching benefits list */
 .stretching-benefits-list {
   max-width: 100%;
