@@ -1304,6 +1304,16 @@
 .top-image-wrapper img {
   max-width: 300px;
   height: auto;
+  animation: floating 4s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
 }
 
 .top-image-wrapper .placeholder-image {
