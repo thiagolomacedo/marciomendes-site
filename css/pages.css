@@ -845,6 +845,10 @@
   object-fit: contain;
 }
 
+.class-image.bg-white {
+  background: #fff;
+}
+
 .class-content {
   padding: 30px;
 }
