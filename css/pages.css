@@ -1944,6 +1944,55 @@
   font-weight: 600;
 }
 
+/* Stretching guideline rows */
+.stretching-guideline-row {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 30px;
+  align-items: flex-start;
+}
+
+.stretching-guideline-row.reverse {
+  grid-template-columns: 1fr 200px;
+}
+
+.stretching-guideline-row.reverse .stretching-guideline-image {
+  order: 2;
+}
+
+.stretching-guideline-row.reverse .stretching-guideline-text {
+  order: 1;
+}
+
+.stretching-guideline-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.stretching-guideline-text p {
+  color: #444;
+  font-size: 15px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.stretching-guideline-text p:last-child {
+  margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+  .stretching-guideline-row,
+  .stretching-guideline-row.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .stretching-guideline-row.reverse .stretching-guideline-image,
+  .stretching-guideline-row.reverse .stretching-guideline-text {
+    order: unset;
+  }
+}
+
 /* Stretching benefits list */
 .stretching-benefits-list {
   max-width: 100%;
