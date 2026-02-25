@@ -1291,90 +1291,80 @@
 
 /* ==================== MEDITATION CLASS ==================== */
 
-/* Benefits Title Section */
-.benefits-title-section {
-  padding: 60px 0;
+/* Top meditation image */
+.meditation-top-image {
+  padding: 60px 0 20px;
 }
 
-.benefits-title-row {
+.top-image-wrapper {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
+  justify-content: center;
 }
 
-.benefits-title-row .section-title {
-  font-size: 48px;
-  color: #00b3b3;
-  margin: 0;
-  flex: 1;
+.top-image-wrapper img {
+  max-width: 300px;
+  height: auto;
 }
 
-.benefits-title-image {
-  width: 280px;
+.top-image-wrapper .placeholder-image {
+  width: 300px;
   height: 200px;
-  flex-shrink: 0;
-}
-
-.benefits-title-image img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;
-}
-
-.benefits-title-image .placeholder-image {
-  width: 100%;
-  height: 100%;
   border-radius: 12px;
 }
 
 /* Meditation Intro */
 .meditation-intro {
-  padding: 80px 0;
-  background: linear-gradient(180deg, #0a0a0a 0%, #0d0d0d 100%);
+  padding: 40px 0 60px;
 }
 
-.meditation-intro .intro-content {
+.meditation-intro .intro-text-content {
   max-width: 800px;
   margin: 0 auto;
-  text-align: center;
 }
 
-.meditation-intro .intro-title {
-  color: #00b3b3;
-  font-size: 36px;
-  margin-bottom: 50px;
-  text-align: center;
+.meditation-intro .intro-label {
+  color: rgba(255,255,255,0.9);
+  font-size: 16px;
+  margin-bottom: 5px;
 }
 
-.meditation-intro .intro-block {
-  text-align: left;
-  margin-bottom: 40px;
-  padding: 30px;
-  background: rgba(255,255,255,0.02);
-  border-radius: 12px;
-  border-left: 4px solid #00b3b3;
-}
-
-.meditation-intro .intro-block:last-child {
-  margin-bottom: 0;
-}
-
-.meditation-intro h3 {
-  color: #00b3b3;
-  font-size: 24px;
+.meditation-intro h2 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 400;
   margin-bottom: 20px;
 }
 
-.meditation-intro p {
-  font-size: 17px;
-  line-height: 1.9;
-  color: rgba(255,255,255,0.85);
+.meditation-intro h3 {
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 30px;
   margin-bottom: 15px;
 }
 
-.meditation-intro p:last-child {
-  margin-bottom: 0;
+.meditation-intro p {
+  font-size: 16px;
+  line-height: 1.8;
+  color: rgba(255,255,255,0.85);
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Key Benefits Title */
+.key-benefits-title {
+  padding: 60px 0;
+}
+
+.key-benefits-title .big-title {
+  font-size: 42px;
+  color: #000;
+  text-align: center;
+  font-weight: 700;
+  background: linear-gradient(135deg, #00b3b3 0%, #008080 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 /* Benefit Sections */
@@ -1634,18 +1624,14 @@
 
 /* Responsive Meditation */
 @media (max-width: 900px) {
-  .benefits-title-row {
-    flex-direction: column;
-    text-align: center;
+  .key-benefits-title .big-title {
+    font-size: 32px;
   }
 
-  .benefits-title-row .section-title {
-    font-size: 36px;
-  }
-
-  .benefits-title-image {
-    width: 200px;
-    height: 150px;
+  .top-image-wrapper .placeholder-image,
+  .top-image-wrapper img {
+    width: 220px;
+    max-width: 220px;
   }
 
   .benefit-row,
