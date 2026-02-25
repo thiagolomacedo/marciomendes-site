@@ -1385,6 +1385,23 @@
   background: linear-gradient(135deg, #0a1a2a 0%, #0d1f3c 100%);
 }
 
+.benefit-section-combined {
+  padding: 80px 0;
+  background: #fff;
+}
+
+.benefit-section-combined .benefit-text h3 {
+  color: #00b3b3;
+}
+
+.benefit-section-combined .benefit-text p {
+  color: #333;
+}
+
+.benefit-section-combined .source-text {
+  color: #666;
+}
+
 .benefit-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
