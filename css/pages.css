@@ -1947,13 +1947,13 @@
 /* Stretching guideline rows */
 .stretching-guideline-row {
   display: grid;
-  grid-template-columns: 200px 1fr;
-  gap: 30px;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   align-items: flex-start;
 }
 
 .stretching-guideline-row.reverse {
-  grid-template-columns: 1fr 200px;
+  grid-template-columns: 1fr 1fr;
 }
 
 .stretching-guideline-row.reverse .stretching-guideline-image {
