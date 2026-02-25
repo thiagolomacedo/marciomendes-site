@@ -1407,7 +1407,7 @@
 }
 
 .benefit-section.blue-gradient-bg {
-  background: linear-gradient(180deg, #0a1822 0%, #0c2035 100%);
+  background: linear-gradient(180deg, #0a1822 0%, #0c2035 50%, #0a1822 100%);
 }
 
 .benefit-section-combined {
