@@ -1492,6 +1492,22 @@
   background: linear-gradient(180deg, #0a0a0a 0%, #000 100%);
 }
 
+.instructor-section .section-title {
+  font-size: 42px;
+  font-weight: 300;
+  letter-spacing: 2px;
+  color: #00b3b3;
+  margin-bottom: 60px;
+  cursor: default;
+  transition: all 0.5s ease;
+}
+
+.instructor-section .section-title:hover {
+  letter-spacing: 6px;
+  filter: drop-shadow(0 0 25px rgba(0, 179, 179, 0.6));
+  transform: scale(1.02);
+}
+
 .instructor-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
