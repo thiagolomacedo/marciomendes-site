@@ -1408,8 +1408,6 @@
 
 .benefit-image img {
   max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 20px 50px rgba(0,0,0,0.3);
 }
 
 .benefit-image .placeholder-image {
