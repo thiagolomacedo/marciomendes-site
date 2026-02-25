@@ -831,6 +831,20 @@
   border: 1px solid #222;
 }
 
+.class-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.class-image img {
+  max-width: 200px;
+  max-height: 200px;
+  object-fit: contain;
+}
+
 .class-content {
   padding: 30px;
 }
