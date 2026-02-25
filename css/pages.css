@@ -1304,6 +1304,7 @@
 .top-image-wrapper img {
   max-width: 300px;
   height: auto;
+  animation: floating 4s ease-in-out infinite;
 }
 
 @keyframes floating {
