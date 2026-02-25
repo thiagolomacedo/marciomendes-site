@@ -1811,10 +1811,14 @@
   padding: 60px 0;
 }
 
+.stretching-section .container {
+  max-width: 900px;
+}
+
 .stretching-section .benefit-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: 60px;
+  gap: 40px;
   align-items: center;
 }
 
@@ -1860,9 +1864,9 @@
 
 .stretching-intro-row {
   display: grid;
-  grid-template-columns: 1fr 350px;
+  grid-template-columns: 1fr 300px;
   gap: 40px;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .stretching-intro-text h3 {
