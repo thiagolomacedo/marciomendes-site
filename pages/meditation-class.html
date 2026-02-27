@@ -103,6 +103,34 @@
             <span class="lang-flag">🇸🇦</span>
             <span class="lang-name">العربية</span>
           </button>
+          <button class="lang-option" onclick="selectLanguage('ru', '🇷🇺', 'RU')">
+            <span class="lang-flag">🇷🇺</span>
+            <span class="lang-name">Русский</span>
+          </button>
+          <button class="lang-option" onclick="selectLanguage('hi', '🇮🇳', 'HI')">
+            <span class="lang-flag">🇮🇳</span>
+            <span class="lang-name">हिन्दी</span>
+          </button>
+          <button class="lang-option" onclick="selectLanguage('tr', '🇹🇷', 'TR')">
+            <span class="lang-flag">🇹🇷</span>
+            <span class="lang-name">Türkçe</span>
+          </button>
+          <button class="lang-option" onclick="selectLanguage('nl', '🇳🇱', 'NL')">
+            <span class="lang-flag">🇳🇱</span>
+            <span class="lang-name">Nederlands</span>
+          </button>
+          <button class="lang-option" onclick="selectLanguage('pl', '🇵🇱', 'PL')">
+            <span class="lang-flag">🇵🇱</span>
+            <span class="lang-name">Polski</span>
+          </button>
+          <button class="lang-option" onclick="selectLanguage('vi', '🇻🇳', 'VI')">
+            <span class="lang-flag">🇻🇳</span>
+            <span class="lang-name">Tiếng Việt</span>
+          </button>
+          <button class="lang-option" onclick="selectLanguage('id', '🇮🇩', 'ID')">
+            <span class="lang-flag">🇮🇩</span>
+            <span class="lang-name">Bahasa Indonesia</span>
+          </button>
         </div>
       </div>
 
@@ -302,7 +330,7 @@
     function googleTranslateElementInit() {
       new google.translate.TranslateElement({
         pageLanguage: 'en',
-        includedLanguages: 'en,pt,es,fr,de,it,ja,ko,zh-CN,ar',
+        includedLanguages: 'en,pt,es,fr,de,it,ja,ko,zh-CN,ar,ru,hi,tr,nl,pl,vi,id',
         autoDisplay: false
       }, 'google_translate_element');
     }
