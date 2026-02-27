@@ -1,0 +1,11 @@
+# Robots.txt for marciomendes.ca
+# Márcio Mendes - Capoeira Master, TRECIRAL Creator, Educator
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://marciomendes.ca/sitemap.xml
+
+# Crawl-delay (optional, be gentle with server)
+Crawl-delay: 1
