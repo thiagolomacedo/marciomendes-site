@@ -122,6 +122,37 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   });
 });
 
+// Coming Soon Popup
+function showComingSoon(e) {
+  e.preventDefault();
+  // Create overlay
+  const overlay = document.createElement('div');
+  overlay.className = 'coming-soon-overlay';
+  overlay.innerHTML = `
+    <div class="coming-soon-popup">
+      <button class="coming-soon-close" onclick="closeComingSoon()">&times;</button>
+      <h3>Coming Soon</h3>
+      <p>This title will be available for purchase shortly. We're preparing everything so you can enjoy this work by Mestre Márcio Mendes.</p>
+      <p class="coming-soon-sub">Stay tuned — great things are on the way.</p>
+    </div>
+  `;
+  document.body.appendChild(overlay);
+  // Animate in
+  requestAnimationFrame(() => overlay.classList.add('active'));
+  // Close on overlay click
+  overlay.addEventListener('click', (ev) => {
+    if (ev.target === overlay) closeComingSoon();
+  });
+}
+
+function closeComingSoon() {
+  const overlay = document.querySelector('.coming-soon-overlay');
+  if (overlay) {
+    overlay.classList.remove('active');
+    setTimeout(() => overlay.remove(), 300);
+  }
+}
+
 // Book Carousel Toggle
 function toggleBookImage(carousel) {
   const images = carousel.querySelectorAll('.book-img');
