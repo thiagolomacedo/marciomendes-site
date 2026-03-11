@@ -90,6 +90,21 @@ document.addEventListener('click', (e) => {
   }
 });
 
+// Back to Top Button
+function handleBackToTop() {
+  const btn = document.querySelector('.back-to-top');
+  if (!btn) return;
+  if (window.scrollY > 400) {
+    btn.classList.add('visible');
+  } else {
+    btn.classList.remove('visible');
+  }
+}
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
 // Initialize
 document.addEventListener('DOMContentLoaded', () => {
   // Set initial state for animated elements
@@ -106,6 +121,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Add scroll listeners
   window.addEventListener('scroll', handleScrollAnimations);
   window.addEventListener('scroll', handleHeaderScroll);
+  window.addEventListener('scroll', handleBackToTop);
 });
 
 // Smooth scroll for anchor links
